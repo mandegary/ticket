@@ -1,0 +1,32 @@
+.editUser {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 5% auto;
+    background: #fff;
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,.2),0 0 0 1px rgba(0,0,0,.075);
+    border-radius: 3px;
+}
+.editUser .button-file label{
+    font-size: 12px !important;
+    text-align: right;
+    padding-right: 10px;
+    margin: 0 !important;
+    color: #555;
+}
+#contained-button-file {
+    display: none;
+}
+.editUser img.avatar {
+    width: 52px;
+    height: 52px;
+    margin-right: 0;
+    object-fit: cover;
+}
+.editUser .uploadContainer .MuiButton-contained {
+    height: 52px;
+    margin: 8px 10px 10px 5px;
+}
+.edited {
+    margin-left: 10px;
+    font-weight: bold;
+}
