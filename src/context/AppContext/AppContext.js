@@ -1,9 +1,15 @@
 import React,{ createContext, useReducer } from 'react';
-export const PostsContext = createContext();
+export const AppContext = createContext();
 const authReducer = (state,action)=>{
     switch (action.type) {
         case 'posts':{
             localStorage.setItem('posts',JSON.stringify(action.payload.posts));
+        }
+        case 'users':{
+            localStorage.setItem('users',JSON.stringify(action.payload.users));
+        }
+        case 'comments':{
+            localStorage.setItem('comments',JSON.stringify(action.payload.comments));
         }
         default:
             return state;
@@ -12,9 +18,9 @@ const authReducer = (state,action)=>{
 const AuthContextProvider=(props)=>{
     const[authenticated,dispatch] = useReducer(authReducer,false);
     return(
-        <PostsContext.Provider value={{authenticated,dispatch}}>
+        <AppContext.Provider value={{authenticated,dispatch}}>
             {props.children}
-        </PostsContext.Provider>
+        </AppContext.Provider>
     )
 }
 export default AuthContextProvider;

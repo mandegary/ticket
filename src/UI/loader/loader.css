@@ -1,0 +1,20 @@
+.loaderr {
+  margin: 0 0 2em;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto 1em;
+  display: flex;
+  vertical-align: top;
+  background: #F5F5F5;
+  justify-content: center;
+  align-items: center;
+}
+/*
+  Set the color of the icon
+*/
+.loaderr svg path,
+.loaderr svg rect{
+  fill: #1A76DC;
+}

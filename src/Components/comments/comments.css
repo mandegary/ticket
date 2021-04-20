@@ -1,0 +1,35 @@
+.comments {
+    margin-top: 5%;
+}
+.commentsHead {
+    margin: 2% auto;
+    border-bottom: 5px double#555;
+    width: 90%;
+    text-align: left;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.comment {
+    margin: 1% auto;
+}
+.comment *{
+    text-align: left;
+}
+.comment {
+    text-align: right;
+    margin: 1% auto;
+    width: 95%;
+    border-bottom: 2px dotted #ccc;
+}
+.comment h5 {
+    font-size: 12px;
+    color: #567eff;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.comment > div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+}
