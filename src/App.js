@@ -6,6 +6,7 @@ import AuthContextProvider from './context/AppContext/AppContext';
 import Home from "./Components/home/home"
 import Data from "./Components/data/data"
 import Post from "./Components/post/post"
+import Login from "./Components/user/login/login"
 function App() {
     return (
         <div className="App">
@@ -13,9 +14,8 @@ function App() {
                 <AuthContextProvider>
                     <div className="main">
                         {/*<Suspense fallback={<div className="pageLoader"><Loader/></div>}>*/}
-                        <Data/>
                         <Switch>
-                            <Route path="/" exact component={Home}/>
+                            <Route path="/" exact component={Login}/>
                             <Route path="/post/:id" exact component={Post}/>
                         </Switch>
                         {/*</Suspense>*/}

@@ -4,8 +4,6 @@ import {AppContext} from '../../context/AppContext/AppContext';
 
 function Data() {
     const {dispatch} = useContext(AppContext);
-    //useEffect(() => {
-
     axios.get(`https://jsonplaceholder.typicode.com/posts`)
         .then(responseJson => {
             dispatch({
@@ -33,11 +31,8 @@ function Data() {
                     }
             });
         })
-
-    //}, []);
     return (
         <div>
-
         </div>
     );
 }

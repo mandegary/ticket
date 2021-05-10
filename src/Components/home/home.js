@@ -10,18 +10,16 @@ const HomePage = (props) => {
     const [index, setIndex] = React.useState(0);
     const [dataLngth, setDataLngth] = React.useState(100);
     const [loading, setLoading] = React.useState(true);
-
-    let users= JSON.parse(localStorage.getItem('users'));
-    let posts= JSON.parse(localStorage.getItem('posts'));
-
+    let posts= JSON.parse(localStorage.getItem('posts')) != null ? JSON.parse(localStorage.getItem('posts')) : []
+    console.log(JSON.parse(localStorage.getItem('users')))
+    let users= JSON.parse(localStorage.getItem('users')) != null ? JSON.parse(localStorage.getItem('users')) : [] ;
 
     useEffect(()=>{
         fetchMoreData();
     },[]);
 
-
     const fetchMoreData = () => {
-        if (dataLngth>0) {
+        if (dataLngth>0 && posts!=null && users!=null) {
             setTimeout(() => {
                 let x = index
                 let newPosts = Object.keys(posts).slice(0, x + 10).map(key => (posts[key]))
@@ -34,6 +32,7 @@ const HomePage = (props) => {
     }
 
     return (
+        (posts!=null && users!=null) &&
         <React.Fragment>
             <div className="home">
                 <Grid container>
